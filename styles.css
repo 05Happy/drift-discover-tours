@@ -538,6 +538,11 @@ footer .brand {
   .button-ghost {
     display:none
   }
+  .hero-copy {
+  width: auto;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
 }
 .hero {
   background-image:linear-gradient(90deg,rgba(4,30,40,.73),rgba(4,30,40,.22)),url("https://images.unsplash.com/photo-1594054478639-66176a66de71?auto=format&fit=crop&w=3000&q=90");
