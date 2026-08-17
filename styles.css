@@ -1,0 +1,693 @@
+:root {
+  --ink:#112b39;
+  --sand:#f6f2e9;
+  --cream:#fffdf8;
+  --ocean:#0d6778;
+  --coral:#dc624e;
+  --line:#d7ded9
+}
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth
+}
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"DM Sans",sans-serif;
+  font-size:16px;
+  line-height:1.55
+}
+a {
+  color:inherit;
+  text-decoration:none
+}
+.site-header {
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6vw;
+  position:absolute;
+  width:100%;
+  z-index:2;
+  color:#fff
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-family:"Playfair Display",serif;
+  font-size:20px;
+  line-height:.9
+}
+.brand i {
+  color:#ffa882
+}
+.brand small {
+  display:block;
+  margin-top:5px;
+  font:600 8px/1 "DM Sans",sans-serif;
+  letter-spacing:1.7px;
+  text-transform:uppercase
+}
+.brand-mark {
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border:1px solid currentColor;
+  border-radius:50%;
+  font-style:italic
+}
+.site-header nav {
+  display:flex;
+  gap:27px;
+  font-size:13px
+}
+.site-header nav a {
+  opacity:.87
+}
+.header-call {
+  font-size:13px;
+  border-bottom:1px solid rgba(255,255,255,.6);
+  padding-bottom:3px
+}
+.header-call span {
+  margin-left:8px
+}
+.hero {
+  min-height:730px;
+  color:white;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:145px 10vw 140px;
+  overflow:hidden;
+  background:linear-gradient(90deg,rgba(4,30,40,.73),rgba(4,30,40,.22)),url("https://images.unsplash.com/photo-1544550285-f813152fb2fd?auto=format&fit=crop&w=2000&q=85") center/cover
+}
+.hero-content {
+  max-width:690px
+}
+.eyebrow {
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2.1px;
+  text-transform:uppercase;
+  margin:0 0 17px
+}
+.coral {
+  color:var(--coral)
+}
+h1,h2,h3,p {
+  margin-top:0
+}
+h1,h2 {
+  font-family:"Playfair Display",serif;
+  font-weight:600;
+  line-height:1.04
+}
+h1 {
+  font-size:clamp(47px,6.3vw,86px);
+  letter-spacing:-2.5px;
+  margin:0 0 25px
+}
+h1 em,h2 em {
+  font-weight:600;
+  color:#9ce1db
+}
+.hero-copy {
+  width:430px;
+  max-width:100%;
+  font-size:17px;
+  color:rgba(255,255,255,.91);
+  margin-bottom:32px
+}
+.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:25px;
+  border-radius:2px;
+  padding:14px 20px;
+  font-weight:700;
+  font-size:13px;
+  transition:transform .2s
+}
+.button:hover {
+  transform:translateY(-2px)
+}
+.button-primary {
+  background:#f1a880;
+  color:var(--ink)
+}
+.button-ghost {
+  margin-left:10px;
+  border:1px solid rgba(255,255,255,.72);
+  color:#fff
+}
+.hero-meta {
+  position:absolute;
+  bottom:0;
+  left:10vw;
+  right:10vw;
+  display:flex;
+  border-top:1px solid rgba(255,255,255,.38)
+}
+.hero-meta div {
+  padding:21px 35px 19px 0;
+  margin-right:35px;
+  min-width:155px;
+  border-right:1px solid rgba(255,255,255,.25)
+}
+.hero-meta b {
+  font:600 22px "Playfair Display",serif;
+  display:block
+}
+.hero-meta span {
+  font-size:11px;
+  color:rgba(255,255,255,.8);
+  text-transform:uppercase;
+  letter-spacing:.8px
+}
+.section {
+  padding-left:10vw;
+  padding-right:10vw
+}
+.intro {
+  padding-top:115px;
+  padding-bottom:95px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10vw;
+  align-items:end
+}
+.intro h2,.itinerary-heading h2,.included h2,.cta h2 {
+  font-size:clamp(38px,4.3vw,61px);
+  letter-spacing:-1.8px;
+  margin:0
+}
+.intro h2 em,.itinerary-heading h2 em,.included h2 em {
+  color:var(--ocean)
+}
+.intro-copy {
+  max-width:460px;
+  font-size:18px;
+  color:#50626a
+}
+.text-link {
+  font-size:13px;
+  font-weight:700;
+  color:var(--coral);
+  display:inline-block;
+  margin-top:12px
+}
+.text-link span {
+  margin-left:12px
+}
+.package-grid {
+  padding-bottom:115px;
+  display:grid;
+  grid-template-columns:40% 60%;
+  min-height:480px
+}
+.price-card {
+  padding:52px 42px;
+  background:var(--ocean);
+  color:#fff
+}
+.price {
+  font:600 58px/1 "Playfair Display",serif;
+  margin:20px 0 3px
+}
+.price sup {
+  font:400 28px "DM Sans",sans-serif;
+  vertical-align:20px
+}
+.price-card>p:not(.eyebrow):not(.price) {
+  font-size:13px;
+  color:#b5d6d6
+}
+.price-rule {
+  height:1px;
+  background:rgba(255,255,255,.25);
+  margin:30px 0 23px
+}
+.price-card ul {
+  list-style:none;
+  padding:0;
+  margin:0 0 32px;
+  font-size:14px
+}
+.price-card li {
+  margin:8px 0
+}
+.price-card li:before {
+  content:"•";
+  color:#eaa182;
+  margin-right:10px
+}
+.button-dark {
+  background:#f1a880;
+  color:var(--ink);
+  width:100%
+}
+.experience-photo {
+  min-height:460px;
+  background:linear-gradient(0deg,rgba(5,31,40,.6),transparent 55%),url("https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1400&q=85") center/cover;
+  position:relative
+}
+.photo-caption {
+  position:absolute;
+  bottom:30px;
+  left:38px;
+  color:#fff
+}
+.photo-caption p {
+  font:600 29px/1.13 "Playfair Display",serif;
+  margin-bottom:12px
+}
+.photo-caption span {
+  font-size:10px;
+  letter-spacing:1.6px;
+  text-transform:uppercase
+}
+.itinerary-section {
+  background:var(--sand);
+  padding:110px 0
+}
+.itinerary-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:55px
+}
+.itinerary-heading>p {
+  max-width:350px;
+  color:#58676a
+}
+.timeline {
+  counter-reset:days
+}
+.timeline article {
+  display:grid;
+  grid-template-columns:100px minmax(260px,1fr) 115px;
+  gap:25px;
+  border-top:1px solid var(--line);
+  padding:24px 0
+}
+.timeline article:last-child {
+  border-bottom:1px solid var(--line)
+}
+.day {
+  font:600 26px "Playfair Display",serif;
+  color:var(--coral)
+}
+.timeline h3 {
+  font:600 23px "Playfair Display",serif;
+  margin:0 0 7px
+}
+.timeline p {
+  margin:0;
+  color:#5b696c;
+  max-width:600px;
+  font-size:14px
+}
+.place {
+  font-size:10px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1.4px;
+  color:var(--ocean);
+  padding-top:9px;
+  text-align:right
+}
+.included {
+  display:grid;
+  grid-template-columns:48% 52%;
+  padding-top:115px;
+  padding-bottom:115px
+}
+.included-image {
+  min-height:500px;
+  background:linear-gradient(0deg,rgba(3,44,54,.72),transparent 65%),url("https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=85") center/cover;
+  padding:40px;
+  color:#fff;
+  display:flex;
+  align-items:end
+}
+.included-image p {
+  font:600 34px/1.08 "Playfair Display",serif;
+  margin:0
+}
+.included-image em {
+  color:#a3e3dd
+}
+.included-copy {
+  padding:30px 0 20px 65px
+}
+.check-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 15px;
+  margin:35px 0 24px
+}
+.check-grid p {
+  font-size:13px;
+  border-bottom:1px solid var(--line);
+  padding:10px 0;
+  margin:0;
+  color:#456066
+}
+.check-grid p::first-letter {
+  color:var(--coral)
+}
+.fine-print {
+  font-size:11px;
+  color:#748084;
+  max-width:500px
+}
+.cta {
+  background:var(--coral);
+  min-height:425px;
+  padding:90px 10vw;
+  display:flex;
+  justify-content:space-between;
+  color:#fff
+}
+.cta h2 em {
+  color:#ffdbbc
+}
+.cta>div>p:not(.eyebrow) {
+  max-width:360px;
+  margin:25px 0 0;
+  color:#fff0e5
+}
+.cta-actions {
+  min-width:280px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:14px;
+  padding-top:35px
+}
+.button-light {
+  background:#fff;
+  color:var(--ink);
+  width:100%;
+  margin-bottom:7px
+}
+.phone {
+  font:600 15px "Playfair Display",serif;
+  border-bottom:1px solid rgba(255,255,255,.46)
+}
+footer {
+  background:#102e3b;
+  color:#e9f1ed;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:37px 10vw;
+  font-size:11px;
+  color:#b8c8c6
+}
+footer .brand {
+  color:#fff;
+  font-size:17px
+}
+.whatsapp {
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  width:51px;
+  height:51px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#25d366;
+  color:#fff;
+  font-size:28px;
+  box-shadow:0 8px 22px #0003;
+  z-index:4
+}
+@media(max-width:720px) {
+  .site-header {
+    padding:0 7vw;
+    height:70px
+  }
+  .site-header nav,.header-call {
+    display:none
+  }
+  .hero {
+    min-height:680px;
+    padding:132px 7vw 130px
+  }
+  .hero-meta {
+    left:7vw;
+    right:7vw
+  }
+  .hero-meta div {
+    min-width:0;
+    flex:1;
+    padding-right:8px;
+    margin-right:8px
+  }
+  .hero-meta b {
+    font-size:18px
+  }
+  .hero-meta span {
+    font-size:8px
+  }
+  .section {
+    padding-left:7vw;
+    padding-right:7vw
+  }
+  .intro {
+    grid-template-columns:1fr;
+    padding-top:75px;
+    padding-bottom:65px;
+    gap:25px
+  }
+  .intro-copy {
+    font-size:16px
+  }
+  .package-grid {
+    grid-template-columns:1fr;
+    padding-bottom:75px
+  }
+  .experience-photo {
+    min-height:320px
+  }
+  .price-card {
+    padding:40px 28px
+  }
+  .itinerary-section {
+    padding:75px 0
+  }
+  .itinerary-heading {
+    display:block;
+    margin-bottom:35px
+  }
+  .itinerary-heading>p {
+    margin-top:22px
+  }
+  .timeline article {
+    grid-template-columns:48px 1fr;
+    gap:12px;
+    padding:20px 0
+  }
+  .place {
+    display:none
+  }
+  .timeline h3 {
+    font-size:20px
+  }
+  .included {
+    grid-template-columns:1fr;
+    padding-top:75px;
+    padding-bottom:75px
+  }
+  .included-image {
+    min-height:320px
+  }
+  .included-copy {
+    padding:50px 0 0
+  }
+  .check-grid {
+    grid-template-columns:1fr
+  }
+  .cta {
+    padding:70px 7vw;
+    display:block
+  }
+  .cta-actions {
+    padding-top:35px
+  }
+  .cta h2 {
+    font-size:52px
+  }
+  footer {
+    padding:30px 7vw;
+    display:block
+  }
+  footer p {
+    margin:17px 0 0
+  }
+  .button-ghost {
+    display:none
+  }
+}
+.hero {
+  background-image:linear-gradient(90deg,rgba(4,30,40,.73),rgba(4,30,40,.22)),url("https://images.unsplash.com/photo-1594054478639-66176a66de71?auto=format&fit=crop&w=3000&q=90");
+  background-position:center
+}
+.experience-photo {
+  background-image:linear-gradient(0deg,rgba(5,31,40,.6),transparent 55%),url("https://vushii.com/uploads/896101724_North%20Bay%20Island%20vushii.jpg")
+}
+.site-header nav,.header-call {
+  font-size:15px
+}
+.site-header nav {
+  gap:32px
+}
+.header-call {
+  font-size:17px;
+  font-weight:700;
+  background:#f1a880;
+  color:#112b39;
+  border:1px solid #f1a880;
+  padding:8px 14px;
+  border-radius:2px
+}
+.site-header .brand {
+  font-size:27px
+}
+.site-header .brand-mark {
+  width:42px;
+  height:42px
+}
+.site-header .brand small {
+  font-size:9px
+}
+.hero h1 {
+  font-size:clamp(42px,5.4vw,72px)
+}
+.hero-actions .button-ghost {
+  background:#fff;
+  color:#112b39;
+  border-color:#fff
+}
+@media(max-width:720px) {
+  .hero-actions .button-ghost {
+    display:inline-flex;
+    margin:10px 0 0
+  }
+  .hero-actions {
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px
+  }
+  .hero-actions .button-ghost {
+    margin-left:0
+  }
+}
+.included-lead {
+  max-width:560px;
+  margin:24px 0 18px;
+  color:#50626a;
+  font-size:15px;
+  line-height:1.75
+}
+.package-details h3 {
+  font:600 22px "Playfair Display",serif;
+  margin:27px 0 8px;
+  color:#112b39
+}
+.package-bullets {
+  list-style:none;
+  padding:0;
+  margin:0
+}
+.package-bullets li {
+  position:relative;
+  padding:9px 0 9px 22px;
+  border-bottom:1px solid #d7ded9;
+  color:#456066;
+  font-size:13px;
+  line-height:1.5
+}
+.package-bullets li:before {
+  position:absolute;
+  left:1px;
+  font-weight:700
+}
+.inclusion-list li:before {
+  content:"✓";
+  color:#dc624e
+}
+.exclusion-list li:before {
+  content:"−";
+  color:#dc624e;
+  font-size:17px;
+  top:6px
+}
+.exclusions h3 {
+  color:#dc624e
+}
+.tour-information {
+  background:#f6f2e9;
+  padding-top:105px;
+  padding-bottom:105px;
+  display:grid;
+  grid-template-columns:42% 58%;
+  gap:45px
+}
+.tour-information h2 {
+  font:600 clamp(38px,4.3vw,61px)/1.04 "Playfair Display",serif;
+  letter-spacing:-1.8px;
+  margin:0
+}
+.tour-information h2 em {
+  color:#0d6778
+}
+.tour-info-copy>p {
+  color:#50626a;
+  font-size:16px;
+  max-width:580px
+}
+.tour-info-list {
+  list-style:none;
+  margin:24px 0 0;
+  padding:0
+}
+.tour-info-list li {
+  position:relative;
+  border-top:1px solid #d7ded9;
+  padding:15px 0 15px 24px;
+  color:#456066;
+  font-size:14px;
+  line-height:1.55
+}
+.tour-info-list li:before {
+  content:"•";
+  position:absolute;
+  left:2px;
+  color:#dc624e;
+  font-size:20px;
+  line-height:1
+}
+@media(max-width:720px) {
+  .tour-information {
+    display:block;
+    padding-top:70px;
+    padding-bottom:70px
+  }
+  .tour-info-copy {
+    margin-top:25px
+  }
+}
+.included-image {
+  background-image:linear-gradient(0deg,rgba(3,44,54,.72),transparent 65%),url("https://images.unsplash.com/photo-1732946763745-3829df58c2e9?auto=format&fit=crop&w=3000&q=90")
+}
