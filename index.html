@@ -434,40 +434,120 @@
             </ul>
           </div>
         </section>
-        <section class="cta" id="contact">
-          <div>
-            <p class="eyebrow">
-              Start your island story
-            </p>
-            <h2>
-              Ready when
-              <br />
-              <em>
-              you are.
-              </em>
-            </h2>
-            <p>
-              Tell us your travel dates and we'll help make the Andamans feel effortless.
-            </p>
-          </div>
-          <div class="cta-actions">
-            <a class="button button-light" href="https://wa.me/918420049212?text=Hi%20Drift%20%26%20Discover%2C%20I%20would%20like%20to%20enquire%20about%20the%20Andaman%20tour%20package." target="_blank" rel="noopener">
-            WhatsApp us
-            <span>
-            ↗
-            </span>
-            </a>
-            <a class="phone" href="tel:+918777868672">
-            +91 87778 68672
-            </a>
-            <a class="phone" href="tel:+917439622134">
-            +91 74396 22134
-            </a>
-            <a class="phone" href="tel:+918420049212">
-            +91 84200 49212
-            </a>
-          </div>
-        </section>
+        <section class="contact-section" id="contact">
+  <div class="contact-intro">
+    <p class="eyebrow coral">
+      Start your island story
+    </p>
+
+    <h2>
+      Let's
+      <br />
+      <em>connect.</em>
+    </h2>
+
+    <p>
+      Planning an Andaman escape? Tell us a little about your trip and
+      we'll help you make it effortless.
+    </p>
+
+    <div class="contact-note">
+      <span>✦</span>
+      <div>
+        <strong>We'll get back to you</strong>
+        <small>Usually within one business day.</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form-wrap">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify
+      class="contact-form"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="first-name">
+            First Name
+            <span>required</span>
+          </label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            placeholder="Your first name"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="last-name">
+            Last Name
+            <span>required</span>
+          </label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            placeholder="Your last name"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="email">
+          Email
+          <span>required</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="phone">
+          Phone / WhatsApp
+          <span>optional</span>
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="+91 98765 43210"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="message">
+          Tell us about your trip
+          <span>required</span>
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Travel dates, number of people, anything you'd like us to know..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="contact-submit">
+        Send enquiry
+        <span>↗</span>
+      </button>
+    </form>
+  </div>
+</section>
       </main>
       <footer>
         <a class="brand" href="#top">
