@@ -884,4 +884,91 @@ footer .brand {
   .contact-submit {
     width: 100%;
   }
+  .timeline article {
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  padding: 28px 0;
+}
+
+.timeline-image {
+  grid-column: 2;
+  width: 100%;
+  height: 210px;
+  margin-top: 10px;
+}
+
+.timeline-copy {
+  grid-column: 2;
+}
+
+.timeline h3 {
+  font-size: 20px;
+}
+
+.timeline-image span {
+  font-size: 8px;
+  padding: 6px 9px;
+}
+}
+/* =========================
+   ITINERARY WITH IMAGES
+   ========================= */
+
+.timeline article {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 310px;
+  gap: 28px;
+  align-items: center;
+  padding: 34px 0;
+  border-top: 1px solid rgba(33, 75, 90, 0.14);
+}
+
+.timeline-copy {
+  min-width: 0;
+}
+
+.timeline-copy h3 {
+  margin-bottom: 12px;
+}
+
+.timeline-copy p {
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.timeline-image {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #d9e3e3;
+}
+
+.timeline-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.timeline-image:hover img {
+  transform: scale(1.04);
+}
+
+.timeline-image span {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #214b5a;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.timeline .day {
+  align-self: start;
+  padding-top: 4px;
 }
