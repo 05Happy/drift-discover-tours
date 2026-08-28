@@ -494,16 +494,8 @@ footer .brand {
   .itinerary-heading>p {
     margin-top:22px
   }
-  .timeline article {
-    grid-template-columns:48px 1fr;
-    gap:12px;
-    padding:20px 0
-  }
   .place {
     display:none
-  }
-  .timeline h3 {
-    font-size:20px
   }
   .included {
     grid-template-columns:1fr;
@@ -543,8 +535,95 @@ footer .brand {
   width: auto;
   max-width: 100%;
   overflow-wrap: break-word;
+  }
+  .contact-section {
+    padding: 80px 7vw;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-intro h2 {
+    font-size: 58px;
+  }
+
+  .contact-intro > p:last-of-type {
+    font-size: 16px;
+  }
+
+  .contact-form-wrap {
+    padding: 30px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+
+  .contact-submit {
+    width: 100%;
+  }
+  /* Mobile itinerary */
+.timeline article {
+  display: block;
+  position: relative;
+  padding: 28px 0;
+  padding-left: 52px;
+}
+
+.timeline-copy {
+  display: block;
+  width: 100%;
+  max-width: none;
+}
+
+.timeline-copy h3 {
+  width: 100%;
+  max-width: none;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.timeline-copy p {
+  width: 100%;
+  max-width: none;
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.timeline-image {
+  display: none;
+}
+
+.timeline .day {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 35px;
 }
 }
+ .tour-information {
+    display:block;
+    padding-top:70px;
+    padding-bottom:70px
+  }
+  .tour-info-copy {
+    margin-top:25px
+  }
+    .hero-actions .button-ghost {
+    display:inline-flex;
+    margin:10px 0 0
+  }
+  .hero-actions {
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px
+  }
+  .hero-actions .button-ghost {
+    margin-left:0
+  }
+
 .hero {
   background-image:linear-gradient(90deg,rgba(4,30,40,.73),rgba(4,30,40,.22)),url("https://images.unsplash.com/photo-1594054478639-66176a66de71?auto=format&fit=crop&w=3000&q=90");
   background-position:center
@@ -584,20 +663,6 @@ footer .brand {
   background:#fff;
   color:#112b39;
   border-color:#fff
-}
-@media(max-width:720px) {
-  .hero-actions .button-ghost {
-    display:inline-flex;
-    margin:10px 0 0
-  }
-  .hero-actions {
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px
-  }
-  .hero-actions .button-ghost {
-    margin-left:0
-  }
 }
 .included-lead {
   max-width:560px;
@@ -684,16 +749,7 @@ footer .brand {
   font-size:20px;
   line-height:1
 }
-@media(max-width:720px) {
-  .tour-information {
-    display:block;
-    padding-top:70px;
-    padding-bottom:70px
-  }
-  .tour-info-copy {
-    margin-top:25px
-  }
-}
+
 .included-image {
   background-image:linear-gradient(0deg,rgba(3,44,54,.72),transparent 65%),url("https://images.unsplash.com/photo-1732946763745-3829df58c2e9?auto=format&fit=crop&w=3000&q=90")
 }
@@ -856,60 +912,7 @@ footer .brand {
    CONTACT - MOBILE
    ========================= */
 
-@media (max-width: 720px) {
 
-  .contact-section {
-    padding: 80px 7vw;
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .contact-intro h2 {
-    font-size: 58px;
-  }
-
-  .contact-intro > p:last-of-type {
-    font-size: 16px;
-  }
-
-  .contact-form-wrap {
-    padding: 30px 24px;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 27px;
-  }
-
-  .contact-submit {
-    width: 100%;
-  }
-  .timeline article {
-  grid-template-columns: 40px 1fr;
-  gap: 12px;
-  padding: 28px 0;
-}
-
-.timeline-image {
-  grid-column: 2;
-  width: 100%;
-  height: 210px;
-  margin-top: 10px;
-}
-
-.timeline-copy {
-  grid-column: 2;
-}
-
-.timeline h3 {
-  font-size: 20px;
-}
-
-.timeline-image span {
-  font-size: 8px;
-  padding: 6px 9px;
-}
-}
 /* =========================
    ITINERARY WITH IMAGES
    ========================= */
@@ -971,4 +974,160 @@ footer .brand {
 .timeline .day {
   align-self: start;
   padding-top: 4px;
+}
+@media (max-width: 720px) {
+  .timeline article {
+    display: block;
+    position: relative;
+    padding: 28px 0 28px 52px;
+    border-top: 1px solid rgba(33, 75, 90, 0.14);
+  }
+
+  .timeline-copy {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .timeline-copy h3 {
+    width: 100%;
+    max-width: none;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+
+  .timeline-copy p {
+    width: 100%;
+    max-width: none;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .timeline-image {
+    display: none;
+  }
+
+  .timeline .day {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 35px;
+    padding-top: 0;
+  }
+
+  .place {
+    display: none;
+  }
+
+}
+@media (max-width: 720px) {
+
+  .contact-section {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 70px 7vw;
+    overflow: hidden;
+  }
+
+  .contact-intro {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 45px;
+  }
+
+  .contact-intro h2 {
+    font-size: 52px;
+    line-height: 0.95;
+  }
+
+  .contact-intro p {
+    max-width: 100%;
+  }
+
+  .contact-form-wrap {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 30px 24px;
+    margin: 0;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    gap: 25px;
+  }
+
+  .form-field {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-submit {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+@media (max-width: 720px) {
+
+  .tour-information {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding: 70px 7vw !important;
+    overflow: hidden;
+  }
+
+  .tour-info-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-top: 30px !important;
+    box-sizing: border-box;
+  }
+
+  .tour-information h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: 52px;
+    line-height: 0.95;
+  }
+
+  .tour-info-copy p,
+  .tour-info-copy li {
+    max-width: 100% !important;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
+
+  .tour-info-copy ul {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 28px;
+    box-sizing: border-box;
+  }
+
 }
