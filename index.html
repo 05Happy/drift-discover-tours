@@ -500,99 +500,96 @@
   </div>
 
   <div class="contact-form-wrap">
-    <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      netlify
-      class="contact-form"
-    >
-      <input type="hidden" name="form-name" value="contact" />
+  <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    class="contact-form"
+  >
+    <input type="hidden" name="form-name" value="contact" />
 
-      <div class="form-row">
-        <div class="form-field">
-          <label for="first-name">
-            First Name
-            <span>required</span>
-          </label>
-          <input
-            type="text"
-            id="first-name"
-            name="first-name"
-            placeholder="Your first name"
-            required
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="last-name">
-            Last Name
-            <span>required</span>
-          </label>
-          <input
-            type="text"
-            id="last-name"
-            name="last-name"
-            placeholder="Your last name"
-            required
-          />
-        </div>
-      </div>
-
+    <div class="form-row">
       <div class="form-field">
-        <label for="email">
-          Email
-          <span>optional</span>
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="you@example.com"
-        />
-      </div>
-
-      <div class="form-field">
-        <label for="phone">
-          Phone / WhatsApp
+        <label for="first-name">
+          First Name
           <span>required</span>
         </label>
+
         <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="+91 98765 43210"
+          type="text"
+          id="first-name"
+          name="first-name"
+          placeholder="Your first name"
           required
         />
       </div>
 
       <div class="form-field">
-        <label for="message">
-          Tell us about your trip
+        <label for="last-name">
+          Last Name
           <span>required</span>
         </label>
-        <textarea
-          id="message"
-          name="message"
-          rows="5"
-          placeholder="Travel dates, number of people, anything you'd like us to know..."
-          required
-        ></textarea>
-      </div>
-      <form name="contact" netlify hidden>
-  <input type="text" name="first-name" />
-  <input type="text" name="last-name" />
-  <input type="email" name="email" />
-  <input type="tel" name="phone" />
-  <textarea name="message"></textarea>
-</form>
 
-      <button type="submit" class="contact-submit">
-        Send enquiry
-        <span>↗</span>
-      </button>
-    </form>
-  </div>
+        <input
+          type="text"
+          id="last-name"
+          name="last-name"
+          placeholder="Your last name"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="email">
+        Email
+        <span>optional</span>
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="phone">
+        Phone / WhatsApp
+        <span>required</span>
+      </label>
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="+91 98765 43210"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="message">
+        Tell us about your trip
+        <span>required</span>
+      </label>
+
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Travel dates, number of people, anything you'd like us to know..."
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="contact-submit">
+      Send enquiry
+      <span>↗</span>
+    </button>
+  </form>
+</div>
 </section>
       </main>
       <footer>
